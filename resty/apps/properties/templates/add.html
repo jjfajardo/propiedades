@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Descripción {% endblock title %}
+{% block content %}
+    <h1>Nueva casa</h1>
+    <div id="form">
+        <form action="." method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'properties:list' %}" class="btn btn-default">Regresar</a>
+            <input type="submit" value="Guardar" class="btn btn-primary">
+        </form>
+    </div>
+
+{% endblock content %}

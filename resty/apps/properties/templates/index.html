@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %} Lista de Propiedades {% endblock title %}
+{% block page_title %}
+    Lista de Casas
+{% endblock page_title %}
+{% block content %}
+    <p><a href="{% url 'properties:add' %}" style="float:right" class="btn btn-success">Agregar nueva</a></p>
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr style="font-weight: bolder" class="text-center">
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Latitude</td>
+                    <td>Longitude</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for home in object_list %}
+                <tr class="text-center">
+                    <td> {{ home.id }}</td>
+                    <td> {{ home.name }}</td>
+                    <td> {{ home.latitude }}</td>
+                    <td> {{ home.longitude }}</td>
+                    <td> $ {{ home.price|intcomma }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
