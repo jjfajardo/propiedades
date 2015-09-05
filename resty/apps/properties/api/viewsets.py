@@ -12,7 +12,7 @@ class HouseViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.AllowAny, )
 
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = (permissions.IsAuthenticated, )
