@@ -7,6 +7,7 @@
 {% block content %}
     <p><a href="{% url 'properties:add' %}" style="float:right" class="btn btn-success">Agregar nueva</a></p>
     <div>
+    {% if object_list %}
         <table class="table table-hover">
             <thead>
                 <tr style="font-weight: bolder" class="text-center">
@@ -29,5 +30,6 @@
             {% endfor %}
             </tbody>
         </table>
+    {% endif %}
     </div>
 {% endblock content %}
