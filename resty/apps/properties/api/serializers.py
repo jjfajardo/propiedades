@@ -7,7 +7,7 @@ from resty.apps.properties.models import House
 class HouseSerializer(serializers.ModelSerializer):
     class Meta:
         model = House
-        fields = ('id', 'code', 'name', 'description', 'image', 'latitude', 'longitude')
+        fields = ('id', 'code', 'name', 'description', 'image', 'latitude', 'longitude', 'price')
 
 
 class UserSerializer(serializers.ModelSerializer):
