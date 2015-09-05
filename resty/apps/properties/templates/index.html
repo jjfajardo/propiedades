@@ -5,7 +5,10 @@
     Lista de Casas
 {% endblock page_title %}
 {% block content %}
-    <p><a href="{% url 'properties:add' %}" style="float:right" class="btn btn-success">Agregar nueva</a></p>
+    <div style="float:right">
+        <p><a href="/api/" class="btn btn-info">API</a>
+        <a href="{% url 'properties:add' %}" class="btn btn-success">Agregar nueva</a></p>
+    </div>
     <div>
     {% if object_list %}
         <table class="table table-hover">
