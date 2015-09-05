@@ -11,7 +11,7 @@
         <table class="table table-hover">
             <thead>
                 <tr style="font-weight: bolder" class="text-center">
-                    <td>ID</td>
+                    <td>Código</td>
                     <td>Nombre</td>
                     <td>Latitude</td>
                     <td>Longitude</td>
@@ -21,7 +21,7 @@
             <tbody>
             {% for home in object_list %}
                 <tr class="text-center">
-                    <td> {{ home.id }}</td>
+                    <td> {{ home.code }}</td>
                     <td> {{ home.name }}</td>
                     <td> {{ home.latitude }}</td>
                     <td> {{ home.longitude }}</td>
